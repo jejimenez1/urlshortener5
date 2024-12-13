@@ -6,6 +6,8 @@ const { MongoClient } = require('mongodb');
 const dns = require('dns')
 const urlparser = require('url')
 
+dotenv.config(); // This loads the variables from the .env file
+
 const client = new MongoClient(process.env.DB_URL)
 const db = client.db("urlshortner")
 const urls = db.collection("urls")
