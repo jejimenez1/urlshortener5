@@ -1,4 +1,3 @@
-const dotenv = require('dotenv');  // Import dotenv without calling config() here
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -6,7 +5,8 @@ const { MongoClient } = require('mongodb');
 const dns = require('dns');
 const urlparser = require('url');
 
-dotenv.config(); // Only call dotenv.config() once to load the variables from .env
+DB_URL="mongodb+srv://test:Jimenez06@cluster0.1mxkd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
 
 const client = new MongoClient(process.env.DB_URL);
 const db = client.db("urlshortner");
