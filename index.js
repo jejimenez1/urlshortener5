@@ -5,7 +5,7 @@ const { MongoClient } = require('mongodb');
 const dns = require('dns');
 const urlparser = require('url');
 
-DB_URL="mongodb+srv://test:Jimenez06@cluster0.1mxkd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+DB_URL="mongodb+srv://test:Jimenez06@cluster0.1mxkd.mongodb.net/urlshortener?retryWrites=true&w=majority&appName=Cluster0"
 
 
 const client = new MongoClient(process.env.DB_URL);
